@@ -12,6 +12,8 @@
 		FD6497BA2975B139006576F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6497B82975B139006576F3 /* Main.storyboard */; };
 		FD6497BC2975B13B006576F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6497BB2975B13B006576F3 /* Assets.xcassets */; };
 		FD6497BF2975B13B006576F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6497BD2975B13B006576F3 /* LaunchScreen.storyboard */; };
+		FD6497C72975B32C006576F3 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6497C62975B32C006576F3 /* Registration.swift */; };
+		FD6497CA2975B63F006576F3 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6497C92975B63E006576F3 /* RoomType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FD6497BB2975B13B006576F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD6497BE2975B13B006576F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD6497C02975B13B006576F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6497C62975B32C006576F3 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		FD6497C92975B63E006576F3 /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		FD6497B12975B139006576F3 /* HotelMiuw */ = {
 			isa = PBXGroup;
 			children = (
+				FD6497C82975B390006576F3 /* Models */,
 				FD6497B22975B139006576F3 /* AppDelegate.swift */,
 				FD6497B42975B139006576F3 /* SceneDelegate.swift */,
 				FD6497B82975B139006576F3 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				FD6497C02975B13B006576F3 /* Info.plist */,
 			);
 			path = HotelMiuw;
+			sourceTree = "<group>";
+		};
+		FD6497C82975B390006576F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD6497C62975B32C006576F3 /* Registration.swift */,
+				FD6497C92975B63E006576F3 /* RoomType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6497CA2975B63F006576F3 /* RoomType.swift in Sources */,
 				FD6497B32975B139006576F3 /* AppDelegate.swift in Sources */,
+				FD6497C72975B32C006576F3 /* Registration.swift in Sources */,
 				FD6497B52975B139006576F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
