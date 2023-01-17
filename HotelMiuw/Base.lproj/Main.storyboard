@@ -10,7 +10,7 @@
         <!--Add Guest Registration-->
         <scene sceneID="Reg-e4-RL1">
             <objects>
-                <tableViewController id="qyn-O0-IKi" sceneMemberID="viewController">
+                <tableViewController id="qyn-O0-IKi" customClass="AddRegistrationTableViewController" customModule="HotelMiuw" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="1FE-mY-p1M">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,14 +19,14 @@
                             <tableViewSection id="eKh-gc-AxH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pMD-nS-Vd6">
-                                        <rect key="frame" x="0.0" y="18" width="393" height="41"/>
+                                        <rect key="frame" x="0.0" y="18" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pMD-nS-Vd6" id="fc2-qe-ikL">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3h-QY-MZN">
-                                                    <rect key="frame" x="20" y="11" width="353" height="19"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -38,14 +38,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JVF-Sp-gmk">
-                                        <rect key="frame" x="0.0" y="59" width="393" height="41.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="59.333332061767578" width="393" height="41.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JVF-Sp-gmk" id="jXg-kS-tSZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="294-2M-of0">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -57,7 +57,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tv8-fu-8nH">
-                                        <rect key="frame" x="0.0" y="100.33333206176758" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="101" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tv8-fu-8nH" id="ExM-Sa-0TS">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -83,8 +83,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Guest Registration" id="axB-v1-oBe">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="BFT-y5-qtS"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="BFT-y5-qtS">
+                            <connections>
+                                <action selector="doneBarButtonTapped:" destination="qyn-O0-IKi" id="Egi-tS-Ikw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="FaS-6A-Y42" id="PqJ-uN-yUb"/>
+                        <outlet property="firstNameTextField" destination="s3h-QY-MZN" id="5RV-3B-Bf5"/>
+                        <outlet property="lastNameTextField" destination="294-2M-of0" id="phz-bA-TbM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tu-TT-Xcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
