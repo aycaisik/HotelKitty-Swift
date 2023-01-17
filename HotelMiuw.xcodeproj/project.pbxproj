@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0D1C0229772CCF005A69E6 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D1C0129772CCF005A69E6 /* AddRegistrationTableViewController.swift */; };
 		FD6497B32975B139006576F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6497B22975B139006576F3 /* AppDelegate.swift */; };
 		FD6497B52975B139006576F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6497B42975B139006576F3 /* SceneDelegate.swift */; };
 		FD6497BA2975B139006576F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6497B82975B139006576F3 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0D1C0129772CCF005A69E6 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		FD6497AF2975B139006576F3 /* HotelMiuw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelMiuw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6497B22975B139006576F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD6497B42975B139006576F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0D1C0329772D47005A69E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D1C0129772CCF005A69E6 /* AddRegistrationTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FD6497A62975B139006576F3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		FD6497B12975B139006576F3 /* HotelMiuw */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D1C0329772D47005A69E6 /* Controllers */,
 				FD6497C82975B390006576F3 /* Models */,
 				FD6497B22975B139006576F3 /* AppDelegate.swift */,
 				FD6497B42975B139006576F3 /* SceneDelegate.swift */,
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6497CA2975B63F006576F3 /* RoomType.swift in Sources */,
+				FD0D1C0229772CCF005A69E6 /* AddRegistrationTableViewController.swift in Sources */,
 				FD6497B32975B139006576F3 /* AppDelegate.swift in Sources */,
 				FD6497C72975B32C006576F3 /* Registration.swift in Sources */,
 				FD6497B52975B139006576F3 /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Add Guest Registration-->
         <scene sceneID="Reg-e4-RL1">
             <objects>
                 <tableViewController id="qyn-O0-IKi" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                             <tableViewSection id="eKh-gc-AxH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pMD-nS-Vd6">
-                                        <rect key="frame" x="0.0" y="18" width="393" height="41.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="18" width="393" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pMD-nS-Vd6" id="fc2-qe-ikL">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3h-QY-MZN">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="19.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11" width="353" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -38,14 +38,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JVF-Sp-gmk">
-                                        <rect key="frame" x="0.0" y="59.666667938232422" width="393" height="41"/>
+                                        <rect key="frame" x="0.0" y="59" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JVF-Sp-gmk" id="jXg-kS-tSZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="294-2M-of0">
-                                                    <rect key="frame" x="20" y="11" width="353" height="19"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -57,7 +57,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tv8-fu-8nH">
-                                        <rect key="frame" x="0.0" y="100.66666793823242" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="100.33333206176758" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tv8-fu-8nH" id="ExM-Sa-0TS">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -82,11 +82,13 @@
                             <outlet property="delegate" destination="qyn-O0-IKi" id="bGQ-q2-0J8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="axB-v1-oBe"/>
+                    <navigationItem key="navigationItem" title="Add Guest Registration" id="axB-v1-oBe">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="BFT-y5-qtS"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tu-TT-Xcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941.22137404580144" y="-70.422535211267615"/>
+            <point key="canvasLocation" x="756" y="-70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AMe-yg-Kqo">
