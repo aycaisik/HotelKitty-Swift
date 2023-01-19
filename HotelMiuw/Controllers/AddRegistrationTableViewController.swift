@@ -53,6 +53,29 @@ class AddRegistrationTableViewController: UITableViewController {
     }
     
     //MARK: - Functions
+    //Ekrana çizmekte olduğu hücrenin yüksekliğini ayarlar.
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath{
+        case checkInDatePickerCellIndexPath:
+            if isCheckInDatePickerShown{
+                return 216
+            }else{
+                return 0
+            }
+            break
+        case checkOutDatePickerCellIndexPath:
+            if isCheckOutDatePickerShown{
+                return 216
+            }else{
+                return 0
+            }
+            break
+        default:
+            //Picker hücreleri dışında kalan tüm hücrelerin yüksekliği.
+            return 44
+            
+        }
+    }
     
     func updateDateViews(){
         //.short --> saat
