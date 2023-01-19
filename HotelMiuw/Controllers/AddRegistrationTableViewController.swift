@@ -31,6 +31,20 @@ class AddRegistrationTableViewController: UITableViewController {
     }
     
     //MARK: - Functions
+    
+    func updateDateViews(){
+        //.short --> saat
+        //.medium --> ay gün , yıl
+        //. lar enumdur
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
+        checkOutLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+        
+    }
+    
     //MARK: - Actions
     @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
         let firstName = firstNameTextField.text!
