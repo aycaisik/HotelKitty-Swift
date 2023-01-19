@@ -45,6 +45,13 @@ class AddRegistrationTableViewController: UITableViewController {
         //.medium --> ay gün , yıl
         //. lar enumdur
         
+        //Otelimizde min bir gece konaklama yapılacağı için checkoutdatepickerin min datesi
+        //o an seçili olan checkindatepickerın 24 saat ilerisi olmalıdır.
+        
+        //addingtimeinterval : var olan bir date nesnesinin üzerine belirtilen miktarda saniye ekler.
+        let oneDay : Double = 24 * 60 * 60
+        checkOutDatePicker.minimumDate = checkOutDatePicker.date.addingTimeInterval(oneDay)
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         
