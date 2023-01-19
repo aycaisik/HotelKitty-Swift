@@ -13,6 +13,12 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
+    @IBOutlet var checkInDateLabel : UILabel!
+    @IBOutlet var checkInDatePicker : UIDatePicker!
+    @IBOutlet var checkOutLabel : UILabel!
+    @IBOutlet var checkOutDatePicker : UIDatePicker!
+    
+    
     
     //MARK: - Properties
     
