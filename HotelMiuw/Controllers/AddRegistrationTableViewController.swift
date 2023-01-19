@@ -27,6 +27,14 @@ class AddRegistrationTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Not: Date() o anın tarihini verir(saat bilgisi dahil).
+        //Check-In tarihini bugünün gecesi olarak ayarla.
+        let midnightToday = Calendar.current.startOfDay(for: Date())
+        
+        //Seçilebilecek en küçük tarihi ayarlar.
+        checkInDatePicker.minimumDate = midnightToday
+        //Seçili olan tarihi ayarlar.
+        checkInDatePicker.date = midnightToday
         
     }
     
