@@ -21,7 +21,21 @@ class AddRegistrationTableViewController: UITableViewController {
     
     
     //MARK: - Properties
+    let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
+    let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
     
+    var isCheckInDatePickerShown : Bool = false{
+        didSet{
+            //isHidden: Bir arayüz elemanının görünürlük bilgisi.
+            checkInDatePicker.isHidden = !isCheckInDatePickerShown
+        }
+    }
+    var isCheckOutDatePickerShown : Bool = false{
+        didSet{
+            //isHidden: Bir arayüz elemanının görünürlük bilgisi.
+            checkOutDatePicker.isHidden = !isCheckOutDatePickerShown
+        }
+    }
     
     //MARK: - Life Cycle
     
@@ -65,6 +79,12 @@ class AddRegistrationTableViewController: UITableViewController {
         let firstName = firstNameTextField.text!
         let lastName = lastNameTextField.text!
         let email = emailTextField.text!
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
         
+    }
+    
+    @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
+        updateDateViews()
     }
 }

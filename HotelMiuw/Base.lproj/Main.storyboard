@@ -111,6 +111,9 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-em-taO">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="227"/>
+                                                    <connections>
+                                                        <action selector="datePickerValueChanged:" destination="qyn-O0-IKi" eventType="valueChanged" id="VS5-kq-1Rw"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -154,6 +157,9 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-qK-0xh">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="227"/>
+                                                    <connections>
+                                                        <action selector="datePickerValueChanged:" destination="qyn-O0-IKi" eventType="valueChanged" id="PIZ-Ag-noT"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -180,6 +186,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkInDateLabel" destination="zd6-eL-yNo" id="Vhg-tT-H9f"/>
+                        <outlet property="checkInDatePicker" destination="lEy-em-taO" id="DpM-30-4NO"/>
+                        <outlet property="checkOutDatePicker" destination="Dd4-qK-0xh" id="UEo-rI-Wkd"/>
+                        <outlet property="checkOutLabel" destination="dRM-Lb-1dO" id="8oN-kt-CG7"/>
                         <outlet property="emailTextField" destination="FaS-6A-Y42" id="PqJ-uN-yUb"/>
                         <outlet property="firstNameTextField" destination="s3h-QY-MZN" id="5RV-3B-Bf5"/>
                         <outlet property="lastNameTextField" destination="294-2M-of0" id="phz-bA-TbM"/>
