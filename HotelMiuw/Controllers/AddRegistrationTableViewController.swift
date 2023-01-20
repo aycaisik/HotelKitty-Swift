@@ -62,14 +62,14 @@ class AddRegistrationTableViewController: UITableViewController {
             }else{
                 return 0
             }
-            break
+            
         case checkOutDatePickerCellIndexPath:
             if isCheckOutDatePickerShown{
                 return 216
             }else{
                 return 0
             }
-            break
+            
         default:
             //Picker hücreleri dışında kalan tüm hücrelerin yüksekliği.
             return 44
