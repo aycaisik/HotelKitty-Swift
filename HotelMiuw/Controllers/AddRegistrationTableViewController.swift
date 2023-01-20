@@ -19,6 +19,12 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet var checkOutDatePicker : UIDatePicker!
     
     
+    @IBOutlet var numberOfAdultsLabel : UILabel!
+    @IBOutlet var numberOfAdultsStepper : UIStepper!
+    @IBOutlet var numberOfChildrensStepper : UIStepper!
+    @IBOutlet var numberOfChildrensLabel : UILabel!
+    
+    
     
     //MARK: - Properties
     let checkInDatelLabelCellIndexPath = IndexPath(row: 0, section: 1)
@@ -51,6 +57,9 @@ class AddRegistrationTableViewController: UITableViewController {
         checkInDatePicker.minimumDate = midnightToday
         //Seçili olan tarihi ayarlar.
         checkInDatePicker.date = midnightToday
+        
+        // Storyboard'da ayarladğımız geçici değerleri, on anki Stepper değeri ile günceller.
+        updateNumberOfGuests()
         
     }
     
@@ -137,7 +146,10 @@ class AddRegistrationTableViewController: UITableViewController {
             checkOutLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
             
         }
-        
+    func updateNumberOfGuests() {
+        numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
+        numberOfChildrensLabel.text = "\(Int(numberOfChildrensStepper.value))"
+    }
         //MARK: - Actions
         @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
             let firstName = firstNameTextField.text!
@@ -151,5 +163,9 @@ class AddRegistrationTableViewController: UITableViewController {
         @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
             updateDateViews()
         }
+    
+        @IBAction func stepperValueChanged(_ stepper: UIStepper) {
+        updateNumberOfGuests()
     }
-}
+    }
+
