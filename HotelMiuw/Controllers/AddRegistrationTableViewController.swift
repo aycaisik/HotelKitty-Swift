@@ -21,6 +21,8 @@ class AddRegistrationTableViewController: UITableViewController {
     
     
     //MARK: - Properties
+    let checkInDatelLabelCellIndexPath = IndexPath(row: 0, section: 1)
+    let checkOutDatelLabelCellIndexPath = IndexPath(row: 2, section: 1)
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
     
@@ -76,38 +78,78 @@ class AddRegistrationTableViewController: UITableViewController {
             
         }
     }
-    
-    func updateDateViews(){
-        //.short --> saat
-        //.medium --> ay gün , yıl
-        //. lar enumdur
+    //didselectrow
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Seçili olan hücrenin, seçili olma durumunu sonlandırır.
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        //Otelimizde min bir gece konaklama yapılacağı için checkoutdatepickerin min datesi
-        //o an seçili olan checkindatepickerın 24 saat ilerisi olmalıdır.
-        
-        //addingtimeinterval : var olan bir date nesnesinin üzerine belirtilen miktarda saniye ekler.
-        let oneDay : Double = 24 * 60 * 60
-        checkOutDatePicker.minimumDate = checkOutDatePicker.date.addingTimeInterval(oneDay)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        
-        checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
-        checkOutLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
-        
+        switch indexPath {
+        case checkInDatelLabelCellIndexPath:
+            if isCheckInDatePickerShown {
+                isCheckInDatePickerShown = false
+            }else if isCheckInDatePickerShown {
+                isCheckOutDatePickerShown = false
+                isCheckInDatePickerShown = true
+            }else {
+                isCheckInDatePickerShown = true
+            }
+            
+            // Değişkenlerdeki değişim ile, heightForRow fonksiyonu tekrardan çalıştırılır.
+            // Fakat yğkseklik değişimleri animasyon ile sağlanır.
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        case checkOutDatelLabelCellIndexPath:
+            if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = false
+            }else if isCheckInDatePickerShown {
+                isCheckOutDatePickerShown = true
+                isCheckInDatePickerShown = false
+            }else {
+                isCheckOutDatePickerShown = true
+            }
+            
+            // Değişkenlerdeki değişim ile, heightForRow fonksiyonu tekrardan çalıştırılır.
+            // Fakat yğkseklik değişimleri animasyon ile sağlanır.
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        default:
+            break
+        }
     }
-    
-    //MARK: - Actions
-    @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
-        let firstName = firstNameTextField.text!
-        let lastName = lastNameTextField.text!
-        let email = emailTextField.text!
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
+        func updateDateViews(){
+            //.short --> saat
+            //.medium --> ay gün , yıl
+            //. lar enumdur
+            
+            //Otelimizde min bir gece konaklama yapılacağı için checkoutdatepickerin min datesi
+            //o an seçili olan checkindatepickerın 24 saat ilerisi olmalıdır.
+            
+            //addingtimeinterval : var olan bir date nesnesinin üzerine belirtilen miktarda saniye ekler.
+            let oneDay : Double = 24 * 60 * 60
+            checkOutDatePicker.minimumDate = checkOutDatePicker.date.addingTimeInterval(oneDay)
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            
+            checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
+            checkOutLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+            
+        }
         
-    }
-    
-    @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
-        updateDateViews()
+        //MARK: - Actions
+        @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
+            let firstName = firstNameTextField.text!
+            let lastName = lastNameTextField.text!
+            let email = emailTextField.text!
+            let checkInDate = checkInDatePicker.date
+            let checkOutDate = checkOutDatePicker.date
+            
+        }
+        
+        @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
+            updateDateViews()
+        }
     }
 }
