@@ -26,6 +26,8 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet var wifiSwitch: UISwitch!
     
+    @IBOutlet var roomTypeLabel: UILabel!
+    
     
     
     //MARK: - Properties
@@ -47,6 +49,8 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    var roomType : RoomType?
+    
     //MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -60,9 +64,12 @@ class AddRegistrationTableViewController: UITableViewController {
         //Seçili olan tarihi ayarlar.
         checkInDatePicker.date = midnightToday
         
-        // Storyboard'da ayarladğımız geçici değerleri, on anki Stepper değeri ile günceller.
+        updateDateViews()
+        
+        //Storyboard'da ayarladğımız geçici değerleri, on anki Stepper değeri ile günceller.
         updateNumberOfGuests()
         
+        updateRoomType()
     }
     
     //MARK: - Functions
@@ -151,6 +158,14 @@ class AddRegistrationTableViewController: UITableViewController {
     func updateNumberOfGuests() {
         numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
         numberOfChildrensLabel.text = "\(Int(numberOfChildrensStepper.value))"
+    }
+    
+    func updateRoomType(){
+        if let roomType = roomType {
+            roomTypeLabel.text = roomType.name
+        }else {
+            roomTypeLabel.text = "Not Set"
+        }
     }
         //MARK: - Actions
         @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
