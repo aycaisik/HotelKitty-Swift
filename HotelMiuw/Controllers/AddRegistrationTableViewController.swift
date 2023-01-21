@@ -157,6 +157,8 @@ class AddRegistrationTableViewController: UITableViewController {
             let email = emailTextField.text!
             let checkInDate = checkInDatePicker.date
             let checkOutDate = checkOutDatePicker.date
+            let numberOfAdults = Int(numberOfAdultsStepper.value)
+            let numberOfChildren = Int(numberOfChildrensStepper.value)
             
         }
         
