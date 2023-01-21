@@ -24,6 +24,8 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet var numberOfChildrensStepper : UIStepper!
     @IBOutlet var numberOfChildrensLabel : UILabel!
     
+    @IBOutlet var wifiSwitch: UISwitch!
+    
     
     
     //MARK: - Properties
@@ -159,6 +161,7 @@ class AddRegistrationTableViewController: UITableViewController {
             let checkOutDate = checkOutDatePicker.date
             let numberOfAdults = Int(numberOfAdultsStepper.value)
             let numberOfChildren = Int(numberOfChildrensStepper.value)
+            let hasWifi = wifiSwitch.isOn
             
         }
         
@@ -168,6 +171,9 @@ class AddRegistrationTableViewController: UITableViewController {
     
         @IBAction func stepperValueChanged(_ stepper: UIStepper) {
         updateNumberOfGuests()
+    }
+        @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
+        
     }
     }
 
