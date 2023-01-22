@@ -53,6 +53,21 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     
     var roomType : RoomType?
     
+    //getonly
+    var registration: Registration?{
+        guard let roomType = roomType else {return nil}
+        let firstName = firstNameTextField.text!
+        let lastName = lastNameTextField.text!
+        let email = emailTextField.text!
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrensStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(FirstName: firstName, LastName: lastName, EmailAdress: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdult: numberOfAdults, numberOChildren: numberOfChildren, roomType: roomType, wifi: hasWifi)
+    }
+    
     //MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -183,15 +198,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
         //MARK: - Actions
         @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
-            let firstName = firstNameTextField.text!
-            let lastName = lastNameTextField.text!
-            let email = emailTextField.text!
-            let checkInDate = checkInDatePicker.date
-            let checkOutDate = checkOutDatePicker.date
-            let numberOfAdults = Int(numberOfAdultsStepper.value)
-            let numberOfChildren = Int(numberOfChildrensStepper.value)
-            let hasWifi = wifiSwitch.isOn
-            let roomChoice = roomType?.name ?? "Not Set"
+          print(registration)
         }
         
         @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
