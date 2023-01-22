@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+   
+    
     //MARK: - UI Elements
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
@@ -73,6 +75,13 @@ class AddRegistrationTableViewController: UITableViewController {
     }
     
     //MARK: - Functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRoomType" {
+            let destination = segue.description as? SelectRoomTableViewController
+            destination?.delegate = self
+            destination?.selectedRoomType = roomType
+        }
+    }
     //Ekrana çizmekte olduğu hücrenin yüksekliğini ayarlar.
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath{
@@ -167,6 +176,11 @@ class AddRegistrationTableViewController: UITableViewController {
             roomTypeLabel.text = "Not Set"
         }
     }
+    
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
         //MARK: - Actions
         @IBAction func doneBarButtonTapped(_ button: UIBarButtonItem){
             let firstName = firstNameTextField.text!
@@ -177,7 +191,7 @@ class AddRegistrationTableViewController: UITableViewController {
             let numberOfAdults = Int(numberOfAdultsStepper.value)
             let numberOfChildren = Int(numberOfChildrensStepper.value)
             let hasWifi = wifiSwitch.isOn
-            
+            let roomChoice = roomType?.name ?? "Not Set"
         }
         
         @IBAction func datePickerValueChanged(_ picker: UIDatePicker){
