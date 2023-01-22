@@ -48,6 +48,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Registrations" id="pjN-n2-EKe">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="SyC-t0-ghd">
+                            <color key="tintColor" red="0.91756367683410645" green="0.56608188152313232" blue="0.90413111448287964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Hoh-yO-Un2" kind="presentation" id="GJs-tW-f8B"/>
                             </connections>
@@ -342,18 +343,18 @@
                                         <rect key="frame" x="0.0" y="924.66667556762695" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bsA-uE-edJ" id="kMB-MH-QYy">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="RoomType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kiy-of-9cI">
-                                                    <rect key="frame" x="20" y="11.999999999999998" width="80.333333333333329" height="20.333333333333332"/>
+                                                    <rect key="frame" x="8" y="11.999999999999998" width="80.333333333333329" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xgy-2g-wSa">
-                                                    <rect key="frame" x="311" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
+                                                    <rect key="frame" x="323" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -375,13 +376,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Guest Registration" id="axB-v1-oBe">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HnI-gk-eYa">
+                            <color key="tintColor" red="0.91756367683410645" green="0.56608188152313232" blue="0.90413111448287964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="qyn-O0-IKi" id="FCG-lW-wWV"/>
+                                <segue destination="EEJ-vd-YVx" kind="unwind" unwindAction="unwindSegueFromAddRegistrationWithUnwindSegue:" id="l2x-pm-n1F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="BFT-y5-qtS">
+                            <color key="tintColor" red="0.91756367683410645" green="0.56608188152313232" blue="0.90413111448287964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="EEJ-vd-YVx" kind="unwind" unwindAction="unwindSegueFromAddRegistrationWithUnwindSegue:" id="A3I-he-FCj"/>
+                                <segue destination="EEJ-vd-YVx" kind="unwind" unwindAction="unwindSegueFromAddRegistrationWithUnwindSegue:" id="vQQ-53-HSu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -414,6 +418,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" red="0.91756367683410645" green="0.56608188152313232" blue="0.90413111448287964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomTypeCell" textLabel="qBk-vg-2qg" detailTextLabel="iyM-SE-c3G" style="IBUITableViewCellStyleValue1" id="K7B-ec-Pbt">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
